@@ -1,1 +1,176 @@
+:root {
+  --pink-soft: #fff0f5;
+  --pink-light: #fde2e4;
+  --pink-medium: #f8a5c2;
+  --pink-accent: #e84393;
+  --text-main: #4a4a4a;
+  --white: #ffffff;
+  --shadow: 0 10px 25px rgba(232, 67, 147, 0.12);
+}
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--pink-soft);
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+/* Cabeçalho */
+header {
+  background: linear-gradient(135deg, #f8a5c2, #ffc0cb);
+  padding: 2.5rem 1rem 2rem;
+  text-align: center;
+  border-bottom: 4px dashed var(--pink-accent);
+  position: relative;
+}
+
+header h1 {
+  color: var(--white);
+  font-size: 2.6rem;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header p {
+  color: var(--white);
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+nav {
+  margin-top: 1.2rem;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 6px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+nav a:hover {
+  background: var(--white);
+  color: var(--pink-accent);
+}
+
+/* Container Principal */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Cards e Seções */
+.card {
+  background: var(--white);
+  border-radius: 25px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--pink-light);
+  position: relative;
+}
+
+.card::before {
+  content: "🌸";
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.4rem;
+  opacity: 0.8;
+}
+
+h2 {
+  color: var(--pink-accent);
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px dotted var(--pink-medium);
+  padding-bottom: 4px;
+  display: inline-block;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Grid de Carros */
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.car-card {
+  background: #fff8f9;
+  border: 2px dashed var(--pink-medium);
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+}
+
+.car-card .emoji {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.car-card h3 {
+  color: var(--pink-accent);
+  margin-bottom: 0.5rem;
+}
+
+/* Botão Interativo */
+.btn-action {
+  background-color: var(--pink-accent);
+  color: var(--white);
+  border: none;
+  padding: 10px 22px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+  margin-top: 0.5rem;
+}
+
+.btn-action:hover {
+  background-color: #d63031;
+  transform: scale(1.03);
+}
+
+.interactive-fact {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fff0f3;
+  border-radius: 15px;
+  border-left: 4px solid var(--pink-accent);
+  display: none;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--pink-medium);
+  color: var(--white);
+  margin-top: 3rem;
+  border-top: 4px dashed var(--pink-accent);
+}
